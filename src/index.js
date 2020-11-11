@@ -1,6 +1,9 @@
 const _ = require('./utils')
 // bindclose
 Component({
+  options: {
+    multipleSlots: true
+  },
   properties: {
     visible: {
       type: Boolean,
@@ -19,7 +22,8 @@ Component({
       // const myEventDetail = {} // detail对象，提供给事件监听函数
       // const myEventOption = {}
       this.triggerEvent('close')
-    }
+    },
+    stopPropagation() {}
   },
   lifetimes: {
     attached() {

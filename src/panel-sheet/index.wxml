@@ -1,0 +1,15 @@
+<view class="action-sheet {{sheetMask ? 'visible' : ''}}"  bindtap="hidSheet">
+  <view class="sheet {{showActions ? 'active' : ''}}" catchtap="stopPropagation">
+    <view class="header">
+      <view class="label-icon">
+        <slot name="label-icon"></slot>
+      </view>
+      <view class="close" catchtap="hidSheet">
+        X
+      </view>
+    </view>
+    <view class="body" >
+      <slot name="body"></slot>
+    </view>
+  </view>
+</view>

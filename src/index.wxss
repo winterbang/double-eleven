@@ -3,32 +3,23 @@
 
 .wrap {
   position: fixed;
-  top: 0;
+  top:0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -1;
+  visibility: hidden;
+  transition: visibility 0.5s;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .wrap.show {
-  z-index: 999;
-}
-.mark {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4);
-  visibility: hidden;
-}
-
-.show .mark {
   visibility: visible;
 }
 
 .body {
   position: absolute;
-  bottom: 0;
   top: 100vh;
+  bottom: 0;
   height: 96vh;
   width: 100vw;
   border-radius: 20px 20px 0 0;

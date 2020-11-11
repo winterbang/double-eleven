@@ -1,12 +1,19 @@
+const { formatDiagnosticsWithColorAndContext } = require("typescript")
+
 Page({
   data: {
-    visible: true,
+    visible: false,
+    visible1: false,
+    navs: ['tab1', 'tab2', 'tab3', 'tab4', 'tab5', 'tab6', 'tab7', 'tab8'],
+    curNav: ''
   },
   close() {
-    console.log("==================close")
     this.setData({ visible: false })
   },
   showSheet() {
     this.setData({visible: true})
+  },
+  onNav(e) {
+    this.setData({curNav: e.target.dataset.nav})
   }
 })

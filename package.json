@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "gulp dev --develop",
     "watch": "gulp watch --develop --watch",
+    "copy": "sh tools/copy.sh",
     "build": "gulp",
-    "dist": "npm run build",
+    "dist": "npm run build && npm run copy",
     "clean-dev": "gulp clean --develop",
     "clean": "gulp clean",
     "test": "jest --bail",

@@ -1,13 +1,14 @@
-<view class="wrap {{visible ? 'show' : ''}}">
-  <view class="mark"></view>
+<view class="wrap {{visible ? 'show' : ''}}" catchtap="stopPropagation">
   <view class="body">
     <view class="header">
       <scroll-view scroll-x="true" style="width: 100%;white-space: nowrap;">
-        <view wx:for="{{navs}}" class="nav">{{item}}</view>
+        <slot name="navbar"></slot>
+        <!-- <view wx:for="{{navs}}" class="nav">{{item}}</view> -->
       </scroll-view>
     </view>
     <scroll-view class="content" scroll-y="true">
-      <view wx:for="{{navs}}" style="height: 80px">{{item}}</view>
+      <!-- <view wx:for="{{navs}}" style="height: 80px">{{item}}</view> -->
+      <slot name="content"></slot>
     </scroll-view>
     <view class="footer">
       <view bindtap="close">X</view>

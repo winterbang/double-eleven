@@ -1,2 +1,12 @@
 <button bindtap="showSheet">show</button>
-<comp visible="{{visible}}" bindclose="close"></comp>
+<button bindtap="showSheet">panel-sheet</button>
+<comp visible="{{visible}}" bindclose="close">
+  <view slot="navbar">
+    <view wx:for="{{navs}}" wx:key="index" class="nav" bindtap="onNav" data-nav="{{item}}">{{item}}</view>
+  </view>
+  <view slot="content">
+    {{curNav}}
+  </view>
+</comp>
+
+<panel-sheet visible="{{visible1}}"></panel-sheet>
