@@ -39,6 +39,7 @@ const writeFileSync = wrap(fs.writeFile)
  * 调整路径分隔符
  */
 function transformPath(filePath, sep = '/') {
+  console.log(filePath)
   return filePath.replace(/[\\/]/g, sep)
 }
 
