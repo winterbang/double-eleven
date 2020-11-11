@@ -1,0 +1,16 @@
+<view class="wrap {{visible ? 'show' : ''}}">
+  <view class="mark"></view>
+  <view class="body">
+    <view class="header">
+      <scroll-view scroll-x="true" style="width: 100%;white-space: nowrap;">
+        <view wx:for="{{navs}}" class="nav">{{item}}</view>
+      </scroll-view>
+    </view>
+    <scroll-view class="content" scroll-y="true">
+      <view wx:for="{{navs}}" style="height: 80px">{{item}}</view>
+    </scroll-view>
+    <view class="footer">
+      <view bindtap="close">X</view>
+    </view>
+  </view> 
+</view>

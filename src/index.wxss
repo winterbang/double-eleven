@@ -1,0 +1,73 @@
+@import "./common.wxss";
+@import "./reset.wxss";
+
+.wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.wrap.show {
+  z-index: 999;
+}
+.mark {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  visibility: hidden;
+}
+
+.show .mark {
+  visibility: visible;
+}
+
+.body {
+  position: absolute;
+  bottom: 0;
+  top: 100vh;
+  height: 96vh;
+  width: 100vw;
+  border-radius: 20px 20px 0 0;
+  background-color: #fff;
+  overflow: hidden;
+  transition: top 0.5s;
+}
+
+.wrap.show .body {
+  top: 4vh;
+}
+
+.header {
+  width: 100vw;
+  height: 50px;
+  background-color: #fff;
+  line-height: 50px;
+  box-shadow: 0 0 3px #eee;
+}
+
+.content {
+  height: calc(100% - 50px);
+  padding-bottom: 60px;
+  box-sizing: border-box;
+}
+
+.nav {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.footer {
+  width: 100vw;
+  height: 65px;
+  position: absolute;
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+  background-color: #fff;
+  box-shadow: 0 0 3px #eee;
+  text-align: center;
+  cursor: pointer;
+}
