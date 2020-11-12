@@ -21,8 +21,12 @@ Component({
     },
     icon: {
       type: String,
-      value: '../../images/icons/picture.png',
+      value: './label.svg',
     },
+    label: {
+      type: String,
+      value: '一个标题'
+    }
   },
   data: {
     showActions: false,

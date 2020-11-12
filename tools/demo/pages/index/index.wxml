@@ -10,7 +10,7 @@
 </comp>
 
 <panel-sheet show="{{visible1}}" bindhidSheet="hidSheet">
-  <image slot="label-icon" class="icon" src="../../images/icons/lightning.png" mode="aspectFill"></image>
-  <view slot="body" style="height: 100%;">
+  <view slot="content" style="height: 100%;">
+    <view>test</view>
   </view>
 </panel-sheet>

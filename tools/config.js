@@ -95,6 +95,6 @@ module.exports = {
   copyIgnore: ['!./weui-wxss/node_modules/**/*', '!./weui-wxss/src/**/*', '!./weui-wxss/dist/example/**/*', '!./weui-wxss/dist/app.wxss', '!./weui-wxss/dist/style/base/**/*', '!./weui-wxss/dist/style/widget/**/*'], // 要忽略的目录/文件
 
   copy: {
-    src: ['./**/*.png', './static/**/*', './**/*.wxss', './**/*.wxs']
+    src: ['./**/*.png', './**/*.svg', './assets/**/*', './**/*.wxss', './**/*.wxs']
   }, // 将会复制到目标目录
 }
