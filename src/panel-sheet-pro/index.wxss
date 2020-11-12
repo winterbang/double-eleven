@@ -1,5 +1,5 @@
-@import "./common.wxss";
-@import "./reset.wxss";
+@import "../assets/common.wxss";
+@import "../assets/reset.wxss";
 
 .wrap {
   position: fixed;

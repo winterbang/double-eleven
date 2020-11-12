@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-
+    "panel-sheet": "./panel-sheet/index",
+    "panel-sheet-pro": "./panel-sheet-pro/index"
   }
 }

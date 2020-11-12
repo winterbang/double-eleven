@@ -1,5 +1,5 @@
 <button bindtap="showSheet">show</button>
-<button bindtap="showSheet">panel-sheet</button>
+<button bindtap="showSheet1">panel-sheet</button>
 <comp visible="{{visible}}" bindclose="close">
   <view slot="navbar">
     <view wx:for="{{navs}}" wx:key="index" class="nav" bindtap="onNav" data-nav="{{item}}">{{item}}</view>
@@ -9,4 +9,8 @@
   </view>
 </comp>
 
-<panel-sheet visible="{{visible1}}"></panel-sheet>
+<panel-sheet show="{{visible1}}" bindhidSheet="hidSheet">
+  <image slot="label-icon" class="icon" src="../../images/icons/lightning.png" mode="aspectFill"></image>
+  <view slot="body" style="height: 100%;">
+  </view>
+</panel-sheet>

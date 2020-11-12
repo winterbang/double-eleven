@@ -256,7 +256,6 @@ class BuildTask {
         entry = path.join(srcPath, `${entry}.json`)
         // eslint-disable-next-line no-await-in-loop
         const newComponentListMap = await checkComponents(entry)
-
         _.merge(mergeComponentListMap, newComponentListMap)
       }
 
@@ -282,7 +281,6 @@ class BuildTask {
      */
     gulp.task(`${id}-component-wxml`, done => {
       const wxmlFileList = this.componentListMap.wxmlFileList
-
       if (wxmlFileList &&
         wxmlFileList.length &&
         !_.compareArray(this.cachedComponentListMap.wxmlFileList, wxmlFileList)) {
@@ -327,7 +325,7 @@ class BuildTask {
      */
     gulp.task(`${id}-component-js`, done => {
       const jsFileList = this.componentListMap.jsFileList
-
+      console.log(jsFileList, 'jsfilelist =========================')
       if (jsFileList &&
         jsFileList.length &&
         !_.compareArray(this.cachedComponentListMap.jsFileList, jsFileList)) {
@@ -357,7 +355,8 @@ class BuildTask {
     gulp.task(`${id}-copy`, gulp.parallel(done => {
       const copyList = this.copyList
       const copyFileList = copyList.map(dir => path.join(dir, '**/*.!(wxss)'))
-
+      console.log(copyFileList, 'copyFileList================')
+      console.log(copyList, 'copyFileList================')
       if (copyFileList.length) return copy(copyFileList)
 
       return done()
@@ -365,7 +364,7 @@ class BuildTask {
       const copyList = this.copyList
       const copyFileList = copyList.map(dir => path.join(dir, '**/*.wxss'))
 
-      if (copyFileList.length) return wxss(copyFileList, srcPath, distPath)
+      if (copyFileList.length) return wxss(copyFileList)
 
       return done()
     }))
@@ -403,6 +402,13 @@ class BuildTask {
     gulp.task(`${id}-watch-ts`, () => {
       this.cachedComponentListMap.tsFileList = null
       return gulp.watch('**/*.ts', {cwd: srcPath, base: srcPath}, gulp.series(`${id}-component-ts`))
+    })
+    /**
+     * 监听 js 变化
+     */
+    gulp.task(`${id}-watch-js`, () => {
+      this.cachedComponentListMap.tsFileList = null
+      return gulp.watch('**/*.js', {cwd: srcPath, base: srcPath}, gulp.series(`${id}-component-js`))
     })
 
     /**
@@ -449,7 +455,7 @@ class BuildTask {
     // gulp.task(`${id}-build`, gulp.series(`${id}-clean-dist`, `${id}-component-check`, gulp.parallel(`${id}-component-less`)))
     gulp.task(`${id}-build`, gulp.series(`${id}-clean-dist`, `${id}-component-check`, gulp.parallel(`${id}-component-wxml`, `${id}-component-js`, `${id}-component-less`, `${id}-component-wxss`, `${id}-component-json`, `${id}-copy`, `${id}-package-json`)))
 
-    gulp.task(`${id}-watch`, gulp.series(`${id}-build`, `${id}-demo`, `${id}-install`, gulp.parallel(`${id}-watch-wxml`, `${id}-watch-wxss`, `${id}-watch-json`, `${id}-watch-copy`, `${id}-watch-install`, `${id}-watch-demo`, `${id}-watch-less`, `${id}-watch-ts`)))
+    gulp.task(`${id}-watch`, gulp.series(`${id}-build`, `${id}-demo`, `${id}-install`, gulp.parallel(`${id}-watch-wxml`, `${id}-watch-wxss`, `${id}-watch-json`, `${id}-watch-copy`, `${id}-watch-install`, `${id}-watch-demo`, `${id}-watch-less`, `${id}-watch-ts`, `${id}-watch-js`)))
 
     gulp.task(`${id}-dev`, gulp.series(`${id}-build`, `${id}-demo`, `${id}-install`))
 

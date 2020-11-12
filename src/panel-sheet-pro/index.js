@@ -1,21 +1,21 @@
-const _ = require('./utils')
+const _ = require('../utils')
 // bindclose
 Component({
   options: {
-    multipleSlots: true
+    multipleSlots: true,
   },
   properties: {
     visible: {
       type: Boolean,
-      value: true
+      value: true,
     },
     navs: {
       type: Array,
-      value: ['tab1', 'tab2', 'tab3', 'tab4', 'tab5', 'tab6', 'tab7', 'tab8']
-    }
+      value: ['tab1', 'tab2', 'tab3', 'tab4', 'tab5', 'tab6', 'tab7', 'tab8'],
+    },
   },
   data: {
-    curNav: ''
+    curNav: '',
   },
   methods: {
     close() {
@@ -23,7 +23,7 @@ Component({
       // const myEventOption = {}
       this.triggerEvent('close')
     },
-    stopPropagation() {}
+    stopPropagation() {},
   },
   lifetimes: {
     attached() {

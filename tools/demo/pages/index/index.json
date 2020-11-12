@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "comp": "../../components/index",
+    "comp": "../../components/panel-sheet-pro/index",
     "panel-sheet": "../../components/panel-sheet/index"
   }
 }
