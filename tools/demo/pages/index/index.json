@@ -1,6 +1,8 @@
 {
   "usingComponents": {
-    "comp": "../../components/panel-sheet-pro/index",
-    "panel-sheet": "../../components/panel-sheet/index"
+    "comp": "../../components/sheet-pro/index",
+    "panel-sheet": "../../components/sheet/index",
+    "navs-panel": "../../components/navs-bar/index",
+    "navs-grid": "../../components/navs-grid/index"
   }
 }

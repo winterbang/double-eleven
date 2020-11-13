@@ -3,16 +3,12 @@
     <view class="header">
       <view class="label-icon">
         <!-- <slot name="label-icon"></slot> -->
-        <image slot="label-icon" class="icon" src="{{icon}}" mode="aspectFill"></image>
+        <image slot="label-icon" class="icon" src="{{icon}}" mode="aspectFit"></image>
       </view>
-      <view class="close" catchtap="hidSheet">
-        X
-      </view>
+      <view class="close" catchtap="hidSheet">X</view>
     </view>
     <view class="body" >
-      <view class="label">
-        {{label}}
-      </view>
+      <view class="label"> {{label}} </view>
       <slot name="content"></slot>
     </view>
   </view>

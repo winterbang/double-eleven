@@ -14,3 +14,6 @@
     <view>test</view>
   </view>
 </panel-sheet>
+
+<navs-panel></navs-panel>
+<navs-grid></navs-grid>
