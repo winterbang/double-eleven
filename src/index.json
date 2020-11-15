@@ -3,6 +3,7 @@
     "sheet": "./sheet/index",
     "sheet-pro": "./sheet-pro/index",
     "navs-bar": "./navs-bar/index",
-    "navs-grid": "./navs-grid/index"
+    "navs-grid": "./navs-grid/index",
+    "swiper-bar": "./swiper-bar/index"
   }
 }

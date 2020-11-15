@@ -3,6 +3,7 @@
     "comp": "../../components/sheet-pro/index",
     "panel-sheet": "../../components/sheet/index",
     "navs-panel": "../../components/navs-bar/index",
-    "navs-grid": "../../components/navs-grid/index"
+    "navs-grid": "../../components/navs-grid/index",
+    "swiper-bar": "../../components/swiper-bar/index"
   }
 }

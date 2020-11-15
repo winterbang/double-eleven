@@ -1,5 +1,7 @@
 <button bindtap="showSheet">show</button>
 <button bindtap="showSheet1">panel-sheet</button>
+
+<swiper-bar></swiper-bar>
 <comp visible="{{visible}}" bindclose="close">
   <view slot="navbar">
     <view wx:for="{{navs}}" wx:key="index" class="nav" bindtap="onNav" data-nav="{{item}}">{{item}}</view>

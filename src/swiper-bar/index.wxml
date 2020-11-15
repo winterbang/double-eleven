@@ -1,0 +1,11 @@
+<view class="wrap">
+  <scroll-view scroll-x="true" class="bar" bindscroll="dragging" enhanced="true">
+    <view wx:for="{{navs}}" class="nav" wx:key="label">
+      <image class="icon" src="{{item.icon}}" mode="widthFix"/>
+      <text>{{item.label}}</text>
+    </view>
+  </scroll-view>
+  <view class="swiper-wrap">
+    <view class="swiper"></view>
+  </view>
+</view>
