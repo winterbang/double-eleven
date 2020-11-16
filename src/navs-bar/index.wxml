@@ -1,10 +1,10 @@
-<view class="wrap">
+<!-- <view class="wrap"> -->
   <view class="panel">
     <navigator wx:for="{{navs}}" url="{{item.to}}" wx:key="text" class="nav">
       <image src="../assets/label.svg" class="icon"></image>
-      <text class="label">{{item.label}}</text>
+      <view class="label">{{item.label}}</view>
       <text class="info">{{item.text}}</text>
       <view class="arrow"></view>
     </navigator>
   </view>
-</view>
+<!-- </view> -->

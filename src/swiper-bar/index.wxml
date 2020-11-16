@@ -6,6 +6,6 @@
     </view>
   </scroll-view>
   <view class="swiper-wrap">
-    <view class="swiper"></view>
+    <view class="swiper" style="left: {{swiperLeft}}"></view>
   </view>
 </view>

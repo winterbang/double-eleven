@@ -11,11 +11,16 @@
   </view>
 </comp>
 
+
 <panel-sheet show="{{visible1}}" bindhidSheet="hidSheet">
   <view slot="content" style="height: 100%;">
     <view>test</view>
   </view>
 </panel-sheet>
 
-<navs-panel></navs-panel>
-<navs-grid></navs-grid>
+<view class="wrap">
+  <navs-panel></navs-panel>
+</view>
+<view class="wrap">
+  <navs-grid></navs-grid>
+</view>

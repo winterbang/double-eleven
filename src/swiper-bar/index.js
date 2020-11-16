@@ -51,20 +51,34 @@ Component({
     },
   },
   data: {
+    scrollWidth: 0,
+    wrapWidth: 0
   },
   lifetimes: {
     ready() {
       const query = wx.createSelectorQuery().in(this)
-      query.select('.bar').boundingClientRect(function (res) {
+      query.select('.bar').boundingClientRect((res) => {
         // eslint-disable-next-line no-console
-        console.log(res)
+        console.log(res.width, 'res =======================')
+        this.setData({wrapWidth: res.width})
+      }).exec()
+      query.selectAll('.nav').boundingClientRect((res) => {
+        const width = res.reduce((result, obj) => result + obj.width, 0)
+        // eslint-disable-next-line no-console
+        console.log(width, 'res.scrollWidth =======================')
+        this.setData({scrollWidth: width})
       }).exec()
     }
   },
   methods: {
-    dragging(detail) {
+    dragging(e) {
+      const left = e.detail.scrollLeft
+      const swiperPosition = left / (this.data.scrollWidth - this.data.wrapWidth)
       // eslint-disable-next-line no-console
-      console.log(detail)
+      console.log(e)
+      // eslint-disable-next-line no-console
+      console.log(left, this.data.scrollWidth, this.data.wrapWidth, swiperPosition)
+      this.setData({swiperLeft: `${swiperPosition * 42}px`})
     }
   }
 })
