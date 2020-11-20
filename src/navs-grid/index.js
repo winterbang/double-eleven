@@ -4,27 +4,27 @@ Component({
       type: Array,
       value: [
         {
-          icon: '',
+          icon: '../assets/label.svg',
           label: 'grid1',
           to: '/url',
         },
         {
-          icon: '',
+          icon: '../assets/label.svg',
           label: 'grid2',
           to: '',
         },
         {
-          icon: '',
+          icon: '../assets/label.svg',
           label: 'grid5',
           to: '',
         },
         {
-          icon: '',
+          icon: '../assets/label.svg',
           label: 'grid3',
           to: '',
         },
         {
-          icon: '',
+          icon: '../assets/label.svg',
           label: 'grid4',
           to: '',
         },

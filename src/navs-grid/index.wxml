@@ -1,12 +1,10 @@
-<!-- <view class="wrap"> -->
-  <view class="panel">
-    <view class="title">{{title}}</view>
-    <view class="navs">
-      <navigator wx:for="{{navs}}" url="{{item.to}}" wx:key="text" class="nav">
-        <image class="icon" src="../assets/label.svg" mode="widthFix"></image>
-        <text class="label">{{item.label}}</text>
-        <!-- <text class="info">{{item.text}}</text> -->
-      </navigator>
-    </view>
+<view class="panel">
+  <view class="title">{{title}}</view>
+  <view class="navs">
+    <navigator wx:for="{{navs}}" url="{{item.to}}" wx:key="text" class="nav">
+      <image class="icon" src="{{item.icon}}" mode="widthFix"></image>
+      <text class="label">{{item.label}}</text>
+      <!-- <text class="info">{{item.text}}</text> -->
+    </navigator>
   </view>
-<!-- </view> -->
+</view>

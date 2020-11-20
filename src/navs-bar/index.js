@@ -4,17 +4,17 @@ Component({
       type: Array,
       value: [
         {
-          icon: '',
+          icon: '../assets/label.svg',
           label: '账单',
           text: '账单',
           to: '/url'
         }, {
-          icon: '',
+          icon: '../assets/label.svg',
           label: '总资产',
           text: '总资产',
           to: ''
         }, {
-          icon: '',
+          icon: '../assets/label.svg',
           label: '余额',
           to: ''
         }
